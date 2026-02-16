@@ -1,11 +1,9 @@
 """
-Author: Alejandro Ramírez
-
-Excel-to-CSV Automation Engine
-A professional CLI utility for high-fidelity conversion of Excel workbooks 
-to standard CSV format. Optimized for batch processing and automated 
-data pipelines.
-"""
+ * Author: Alejandro Ramírez
+ * Project: excel-to-csv-converter
+ * Logic: Professional CLI engine for high-fidelity conversion of Excel 
+ * workbooks to CSV, featuring batch sheet processing and automated path resolution.
+ """
 
 import os
 import sys
@@ -13,7 +11,7 @@ import argparse
 import pandas as pd
 from typing import List, Optional
 
-class ExcelConverter:
+class ExcelConverterLogic:
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
 
@@ -72,7 +70,7 @@ def main():
 
     args = parser.parse_args()
 
-    converter = ExcelConverter(verbose=args.verbose)
+    converter = ExcelConverterLogic(verbose=args.verbose)
     converter.convert(args.input, args.output, args.sheet, args.all)
 
 if __name__ == "__main__":
